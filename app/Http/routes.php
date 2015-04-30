@@ -11,7 +11,7 @@
 |
 */
 
-Route::resource('entry', 'PortfolioEntryController');
+Route::resource('entry', 'EntryController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
