@@ -15,6 +15,12 @@ class CreateEntriesTable extends Migration {
 		Schema::create('entries', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('title');
+			$table->string('medium');
+			$table->date('date');
+			$table->string('image');
+			$table->string('thumbnail');
+			// $table->integer('user_id')->references('id')->on('users');
 			$table->timestamps();
 		});
 	}
