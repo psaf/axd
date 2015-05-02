@@ -14,7 +14,14 @@ Route::get('/', function() {
 	return view('pages.home');
 });
 
-Route::resource('entry', 'EntryController');
+/**
+ * Administration
+ */
+Route::group(['prefix' => 'admin'], function() {
+
+	Route::resource('entry', 'EntryController');
+
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
